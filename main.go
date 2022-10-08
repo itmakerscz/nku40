@@ -46,7 +46,7 @@ func main() {
         log.Fatal(err)
     }
 
-    tmpl := template.Must(template.ParseFiles("templates/main.html"))
+    tmplCovid := template.Must(template.ParseFiles("templates/main.html"))
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
     
         res, err := db.Query("SELECT * FROM pohlavi")
@@ -66,13 +66,58 @@ func main() {
             gd.Genders = append(gd.Genders, Gender{Code: g.Code, Name: g.Name})
         }        
     
-       tmpl.Execute(w, gd)
+       tmplCovid.Execute(w, gd)
     }) 
     
+    tmplHospital := template.Must(template.ParseFiles("templates/hospitalizace.html"))
+    http.HandleFunc("/hospitalizace", func(w http.ResponseWriter, r *http.Request) {
+    
+        res, err := db.Query("SELECT * FROM pohlavi")
+        defer res.Close()
+    
+        if err != nil {
+            log.Fatal(err)
+        }
+    
+        gd := GenderData{
+            PageTitle: "Hospitalizace",
+        }
+    
+        for res.Next() {
+            var g Gender
+            if err := res.Scan(&g.Code, &g.Name); err != nil {  }
+            gd.Genders = append(gd.Genders, Gender{Code: g.Code, Name: g.Name})
+        }        
+    
+       tmplHospital.Execute(w, gd)
+    }) 
 
 
+    tmplJip := template.Must(template.ParseFiles("templates/jip.html"))
+    http.HandleFunc("/jip", func(w http.ResponseWriter, r *http.Request) {
+    
+        res, err := db.Query("SELECT * FROM pohlavi")
+        defer res.Close()
+    
+        if err != nil {
+            log.Fatal(err)
+        }
+    
+        gd := GenderData{
+            PageTitle: "JIP",
+        }
+    
+        for res.Next() {
+            var g Gender
+            if err := res.Scan(&g.Code, &g.Name); err != nil {  }
+            gd.Genders = append(gd.Genders, Gender{Code: g.Code, Name: g.Name})
+        }        
+    
+       tmplJip.Execute(w, gd)
+    }) 
 
-    http.HandleFunc("/getJson", func(w http.ResponseWriter, r *http.Request) {
+
+    http.HandleFunc("/getCovid", func(w http.ResponseWriter, r *http.Request) {
     
         res, err := db.Query("select count(okres_lau_kod) as amount, okresy.lat, okresy.lng from pozitivnipripady left join okresy on pozitivnipripady.okres_lau_kod = okresy.code where okresy.lat != '' group by okresy.lat,okresy.lng")
         defer res.Close()
@@ -93,7 +138,45 @@ func main() {
     }) 
 
 
+    http.HandleFunc("/getHospital", func(w http.ResponseWriter, r *http.Request) {
+    
+        res, err := db.Query("select count(okres_lau_kod) as amount, okresy.lat, okresy.lng from pozitivnipripady left join okresy on pozitivnipripady.okres_lau_kod = okresy.code where hospitalizace = '1' and okresy.lat != '' group by okresy.lat,okresy.lng")
+        defer res.Close()
+    
+        if err != nil {
+            log.Fatal(err)
+        }
 
+        w.Header().Add("Content-Type", "application/json")
+        w.WriteHeader(http.StatusOK)
+
+        for res.Next() {
+            var p Positive
+            if err := res.Scan(&p.Count, &p.Lat, &p.Lng); err != nil {  }
+		    w.Write([]byte(`{"lat": `+ p.Lat + `, "lng": `+ p.Lng + `, "count": `+ p.Count + `},`))
+
+        }
+    }) 
+
+    http.HandleFunc("/getJip", func(w http.ResponseWriter, r *http.Request) {
+    
+        res, err := db.Query("select count(okres_lau_kod) as amount, okresy.lat, okresy.lng from pozitivnipripady left join okresy on pozitivnipripady.okres_lau_kod = okresy.code where jip = '1' and okresy.lat != '' group by okresy.lat,okresy.lng;")
+        defer res.Close()
+    
+        if err != nil {
+            log.Fatal(err)
+        }
+
+        w.Header().Add("Content-Type", "application/json")
+        w.WriteHeader(http.StatusOK)
+
+        for res.Next() {
+            var p Positive
+            if err := res.Scan(&p.Count, &p.Lat, &p.Lng); err != nil {  }
+		    w.Write([]byte(`{"lat": `+ p.Lat + `, "lng": `+ p.Lng + `, "count": `+ p.Count + `},`))
+
+        }
+    }) 
 
     fmt.Printf("Server running (port=8080), route: http://localhost:8080/\n")
     if err := http.ListenAndServe(":8080", nil); err != nil {
