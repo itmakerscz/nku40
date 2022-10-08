@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- blue #0089fa; red #ff002b; yellow #ffa900; green #00a753; -->
+<!-- blue #0099ff; red #ff0033; yellow #ff9900; green #009966; -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="192px" height="192px" viewBox="0 0 192 192" enable-background="new 0 0 192 192" xml:space="preserve">
+<g id="sign">
+	<g id="control">
+		<g id="dots" fill="#0099ff">
+			<circle fill="" cx="96" cy="96" r="16"/>
+			<circle fill="" cx="40" cy="60" r="8"/>
+			<circle fill="" cx="144" cy="144" r="8"/>
+			<circle fill="" cx="152" cy="40" r="8"/>
+			<circle fill="" cx="140" cy="88" r="8"/>
+			<circle fill="" cx="48" cy="136" r="8"/>
+		</g>
+		<g id="path" transform="rotate(0 0 0)">
+			<path fill="none" stroke="#0099ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M96,96L40,60"/>
+			<path fill="none" stroke="#0099ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M96,96l48,48"/>
+			<path fill="none" stroke="#0099ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M96,96l56-56"/>
+			<path fill="none" stroke="#0099ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M96,96l44-8"/>
+			<path fill="none" stroke="#0099ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M96,96l-48,40"/>
+		</g>
+	</g>
+</g>
+</svg>

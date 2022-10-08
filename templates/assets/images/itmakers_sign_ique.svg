@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- blue #0089fa; red #ff002b; yellow #ffa900; green #00a753; -->
+<!-- blue #0099ff; red #ff0033; yellow #ff9900; green #009966; -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="192px" height="192px" viewBox="0 0 192 192" enable-background="new 0 0 192 192" xml:space="preserve">
+<g id="sign">
+  <g id="nevimto">
+    <polygon fill="#ff0033" points="96,32 32,64 32,128 96,160 112,152 112,136 96,144 48,120 48,72 112,40 	"/>
+    <polygon fill="#ff0033" points="128,48 160,64 160,128 144,120 144,72 128,64 80,88 80,120 64,112 64,80 	"/>
+  </g>
+</g>
+</svg>

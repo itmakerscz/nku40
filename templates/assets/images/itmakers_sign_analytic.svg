@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- blue #0089fa; red #ff002b; yellow #ffa900; green #00a753; -->
+<!-- blue #0099ff; red #ff0033; yellow #ff9900; green #009966; -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="192px" height="192px" viewBox="0 0 192 192" enable-background="new 0 0 192 192" xml:space="preserve">
+<g id="sign">
+	<g id="analytic">
+		<g id="dots" display="inline">
+			<circle fill="#ff9900" cx="40" cy="92" r="8"/>
+			<circle fill="#ff9900" cx="72" cy="116" r="8"/>
+			<circle fill="#ff9900" cx="112" cy="68" r="8"/>
+			<circle fill="#ff9900" cx="152" cy="60" r="8"/>
+		</g>
+		<g id="path" fill="#ff9900" transform="rotate(0 0 0)" display="inline">
+			<path fill="none" stroke="#ff9900" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M40,92l32,24l40-48l40-8
+				"/>
+			<path fill="" d="M104,116c0-4.418-3.582-8-8-8l0,0c-4.418,0-8,3.582-8,8v16c0,4.418,3.582,8,8,8l0,0c4.418,0,8-3.582,8-8
+				V116"/>
+			<path fill="" d="M128,96c0-4.418-3.582-8-8-8l0,0c-4.418,0-8,3.582-8,8v36c0,4.418,3.582,8,8,8l0,0c4.418,0,8-3.582,8-8
+				V96"/>
+			<path fill="" d="M136,84c0-4.418,3.582-8,8-8l0,0c4.418,0,8,3.582,8,8v48c0,4.418-3.582,8-8,8l0,0c-4.418,0-8-3.582-8-8
+				V84"/>
+		</g>
+	</g>
+</g>
+</svg>

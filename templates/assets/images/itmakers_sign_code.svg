@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- blue #0089fa; red #ff002b; yellow #ffa900; green #00a753; -->
+<!-- blue #0099ff; red #ff0033; yellow #ff9900; green #009966; -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="192px" height="192px" viewBox="0 0 192 192" enable-background="new 0 0 192 192" xml:space="preserve">
+<g id="sign">
+	<g id="code">
+		<g id="path" transform="rotate(0 0 0)" display="inline">
+			<path fill="none" stroke="#009933" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M128,128l32-32l-32-32"/>
+			
+				<line fill="none" stroke="#009933" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" x1="112" y1="48" x2="80" y2="144"/>
+			<path fill="none" stroke="#009933" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M64,64L32,96l32,32"/>
+		</g>
+		<g id="dots" display="inline">
+			<circle fill="#009933" cx="64" cy="64" r="8"/>
+			<circle fill="#009933" cx="128" cy="128" r="8"/>
+		</g>
+	</g>
+</g>
+</svg>

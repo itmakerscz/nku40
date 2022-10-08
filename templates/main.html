@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1.0, user-scalable=0">
+
+    <title>hackujstat.cz - Cre1ToRs #hackujstat #covid #mzcr {{.PageTitle}}</title>
+
+    <meta name="description" content="Tvoje webová stránka, aplikace, eshop, informační systém zaslouží lepší kabát, fullstack web developer analytic, analýza, vývoj, kontrola, #analyzujto.cz, #programujto.cz, #kontrolujto.cz">
+
+    <meta name="keywords" content="webová stránka, aplikace, eshop, informační systém, fullstack, web, developer, analytic, analýza, vývoj, kontrola, analyzujto.cz, programujto.cz, kontrolujto.cz">
+
+    <meta name="author" content="Aliaksandr Sazankou @itmakers.cz #itmakerscz" />
+
+    <!--
+      <link rel="stylesheet" href="./assets/css/style.css">
+    -->
+    <link rel="stylesheet" href="/static/css/animation.css?v=20190101">
+    <link rel="stylesheet" href="/static/css/theme.css?v=202210071936">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="icon" sizes="192x192" href="/static/images/itmakers_sign.png">
+    <link rel="shortcut icon" href="/static/images/itmakers_sign.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+    <link rel="apple-touch-startup-image" href="/static/images/itmakers_sign.png">
+    <link rel="apple-touch-icon" href="/static/images/itmakers_sign.png">
+
+    <meta name="apple-mobile-web-app-title" content="itmakers.cz">
+    <meta name="application-name" content="itmakers.cz">
+    <meta name="msapplication-TileColor" content="#ff0033">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Schema.org markup -->
+    <meta itemprop="name" content="itmakers.cz - just make it!">
+    <meta itemprop="description" content="Tvoje webová stránka, aplikace, eshop, informační systém zaslouží lepší kabát, fullstack web developer analytic, analýza, vývoj, kontrola, analyzujto.cz, programujto.cz, kontrolujto.cz">
+    <meta itemprop="image" content="/static/images/itmakers_sign.png">
+
+
+    <script>
+        function nav() {
+            var ul = document.getElementById('nav-sub');
+            if (ul.classList.toggle("nav-sub")) {
+                ul.classList.add("nav-sub");
+            }
+        }
+    </script>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+
+    <nav id="im-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+        <ul class="nav-container">
+            <li class="nav-header center hidden">
+                <ul>
+                    <li>
+                        Tento web používá k poskytování služeb, personalizaci reklam a analýze návštěvnosti soubory cookie. Používáním tohoto webu s tím souhlasíte.
+                        <a href="privacy.html" title="itmakers.cz - Privacy and Terms" rel="">Privacy &amp; Terms</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-main">
+                <ul>
+                    <li class="nav-main-left">
+                        <ul>
+                            <li><a href="#hackujstat">#hackujstat</a></li>
+                            <li><a href="#services">COVID-19</a></li>
+                            <li><a href="#services">KHS Hospodaření</a></li>
+                            <!--<li><a href="#reference">Reference</a></li>-->
+                            <!--<li><a href="#onas">O nás</a></li>
+                <li><a href="#technologie">Technologie</a></li>-->
+                        </ul>
+                    </li>
+
+                    <li class="nav-main-right">
+                        <ul>
+                            <!--<li><a href="#">Kariéra</a></li>-->
+                            <!--<li><a href="#kontakty">Kontakt</a></li>-->
+                            <li>
+                                <a href="javascript:nav(0);" class="nav-main-dropdown" title="" rel="nofollow">&equiv;</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="nav-footer hidden">
+                <ul>
+                    <li>
+                        &nbsp;
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <main id="im-main" role="main" itemscope itemprop="mainContentOfPage">
+
+        <article role="article" class="im-main-article">
+            <div class="im-article-header center"></div>
+
+            <div class="im-col-full">
+                <div class="im-col-header">&nbsp;</div>
+
+                <div class="im-col-section center">
+                    <div id="map"></div>
+                </div>
+
+                <div class="im-col-footer">
+                </div>
+            </div>
+
+            <div class="im-article-footer clearfix"></div>
+        </article>
+
+
+    </main>
+    <!-- #main -->
+
+    <a name="kontakty"></a>
+    <footer id="im-footer" class="center padding" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+        &copy;
+        <a href="//itmakers.cz" class="title" title="itmakers.cz - just make it" rel="">
+            <abbr title="Information Technology">it</abbr> makers <span class="under">just make it</span>
+        </a> <sup>&reg;</sup>
+        <a href="//itmakers.cz/#imcms" class="title" title="itmakers.cz - imCMS (mobile intelligence cms)" rel="">
+            <abbr title="it makers">im</abbr> cms
+        </a>
+        <p>
+            <a href="privacy.html" title="itmakers.cz - Privacy and Terms" rel="">Privacy &amp; Terms</a>
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script src="/static/js/heatmap.min.js"></script>
+    <script src="/static/js/leaflet-heatmap.js"></script>
+    <script src="/static/js/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var testData = null;
+            $.ajax({
+                'async': false,
+                'global': false,
+                'url': 'http://localhost:8080/getJson',
+                'dataType': "json",
+                'success': function(dataJson) {
+                    console.log(dataJson);
+                }
+            });
+
+            //console.log(testData);
+
+            var testData = {
+                max: 3,
+                data: [{
+                    "lat": 48.753140,
+                    "lng": 16.8825170,
+                    "count": 1456
+                }, {
+                    "lat": 48.812735,
+                    "lng": 14.3174660,
+                    "count": 905
+                }, {
+                    "lat": 48.852939,
+                    "lng": 17.1260030,
+                    "count": 3919
+                }, {
+                    "lat": 48.855911,
+                    "lng": 16.0542680,
+                    "count": 1568
+                }, {
+                    "lat": 48.975658,
+                    "lng": 14.4802550,
+                    "count": 4996
+                }, {
+                    "lat": 49.010910,
+                    "lng": 14.0000000,
+                    "count": 924
+                }, {
+                    "lat": 49.059797,
+                    "lng": 17.4958500,
+                    "count": 4999
+                }, {
+                    "lat": 49.144482,
+                    "lng": 15.0061390,
+                    "count": 1452
+                }, {
+                    "lat": 49.195060,
+                    "lng": 16.6068370,
+                    "count": 8288
+                }, {
+                    "lat": 49.214787,
+                    "lng": 15.8795520,
+                    "count": 2245
+                }, {
+                    "lat": 49.224437,
+                    "lng": 17.6627630,
+                    "count": 5424
+                }, {
+                    "lat": 49.260404,
+                    "lng": 13.9103080,
+                    "count": 1413
+                }, {
+                    "lat": 49.277452,
+                    "lng": 16.9960990,
+                    "count": 1391
+                }, {
+                    "lat": 49.291658,
+                    "lng": 17.3993800,
+                    "count": 2758
+                }, {
+                    "lat": 49.303454,
+                    "lng": 14.1580290,
+                    "count": 1618
+                }, {
+                    "lat": 49.338925,
+                    "lng": 17.9938520,
+                    "count": 2888
+                }, {
+                    "lat": 49.364850,
+                    "lng": 16.6477550,
+                    "count": 2082
+                }, {
+                    "lat": 49.395555,
+                    "lng": 13.2950940,
+                    "count": 1747
+                }, {
+                    "lat": 49.398378,
+                    "lng": 15.5870410,
+                    "count": 2362
+                }, {
+                    "lat": 49.412989,
+                    "lng": 14.6774660,
+                    "count": 2369
+                }, {
+                    "lat": 49.430621,
+                    "lng": 15.2229830,
+                    "count": 1725
+                }, {
+                    "lat": 49.439703,
+                    "lng": 12.9311430,
+                    "count": 1243
+                }, {
+                    "lat": 49.456479,
+                    "lng": 17.4502300,
+                    "count": 2730
+                }, {
+                    "lat": 49.472449,
+                    "lng": 17.1067510,
+                    "count": 2732
+                }, {
+                    "lat": 49.564188,
+                    "lng": 15.9394070,
+                    "count": 2956
+                }, {
+                    "lat": 49.593778,
+                    "lng": 17.2508790,
+                    "count": 6326
+                }, {
+                    "lat": 49.594325,
+                    "lng": 18.0135360,
+                    "count": 2671
+                }, {
+                    "lat": 49.604336,
+                    "lng": 15.5796550,
+                    "count": 1780
+                }, {
+                    "lat": 49.681930,
+                    "lng": 18.3673220,
+                    "count": 4752
+                }, {
+                    "lat": 49.685432,
+                    "lng": 13.9989450,
+                    "count": 3383
+                }, {
+                    "lat": 49.738097,
+                    "lng": 13.5928930,
+                    "count": 979
+                }, {
+                    "lat": 49.738431,
+                    "lng": 13.3736370,
+                    "count": 5503
+                }, {
+                    "lat": 49.755163,
+                    "lng": 16.4691860,
+                    "count": 2217
+                }, {
+                    "lat": 49.783782,
+                    "lng": 14.6873700,
+                    "count": 2817
+                }, {
+                    "lat": 49.798780,
+                    "lng": 12.6361920,
+                    "count": 802
+                }, {
+                    "lat": 49.820923,
+                    "lng": 18.2625240,
+                    "count": 6596
+                }, {
+                    "lat": 49.856652,
+                    "lng": 18.5432190,
+                    "count": 5583
+                }, {
+                    "lat": 49.940660,
+                    "lng": 17.8947990,
+                    "count": 4031
+                }, {
+                    "lat": 49.949724,
+                    "lng": 15.7950580,
+                    "count": 2091
+                }, {
+                    "lat": 49.952431,
+                    "lng": 15.2686540,
+                    "count": 1306
+                }, {
+                    "lat": 49.967205,
+                    "lng": 14.0862840,
+                    "count": 2268
+                }, {
+                    "lat": 49.972180,
+                    "lng": 16.3996620,
+                    "count": 2672
+                }, {
+                    "lat": 49.977841,
+                    "lng": 16.9717750,
+                    "count": 2316
+                }, {
+                    "lat": 49.988177,
+                    "lng": 17.4636940,
+                    "count": 1396
+                }, {
+                    "lat": 50.027329,
+                    "lng": 15.2027280,
+                    "count": 2549
+                }, {
+                    "lat": 50.034309,
+                    "lng": 15.7811990,
+                    "count": 3279
+                }, {
+                    "lat": 50.075538,
+                    "lng": 14.4378000,
+                    "count": 10221
+                }, {
+                    "lat": 50.106123,
+                    "lng": 13.7396620,
+                    "count": 1058
+                }, {
+                    "lat": 50.141699,
+                    "lng": 14.1067460,
+                    "count": 3363
+                }, {
+                    "lat": 50.165965,
+                    "lng": 16.2776840,
+                    "count": 1251
+                }, {
+                    "lat": 50.174529,
+                    "lng": 12.6598920,
+                    "count": 1286
+                }, {
+                    "lat": 50.185582,
+                    "lng": 15.0436600,
+                    "count": 2223
+                }, {
+                    "lat": 50.210361,
+                    "lng": 15.8252110,
+                    "count": 3615
+                }, {
+                    "lat": 50.224625,
+                    "lng": 17.1980470,
+                    "count": 712
+                }, {
+                    "lat": 50.353902,
+                    "lng": 14.4817810,
+                    "count": 2414
+                }, {
+                    "lat": 50.361217,
+                    "lng": 13.7860321,
+                    "count": 1374
+                }, {
+                    "lat": 50.413425,
+                    "lng": 14.9084380,
+                    "count": 2726
+                }, {
+                    "lat": 50.414572,
+                    "lng": 16.1656350,
+                    "count": 2923
+                }, {
+                    "lat": 50.435333,
+                    "lng": 15.3610440,
+                    "count": 1191
+                }, {
+                    "lat": 50.463498,
+                    "lng": 13.4107370,
+                    "count": 2315
+                }, {
+                    "lat": 50.501555,
+                    "lng": 13.6329120,
+                    "count": 1336
+                }, {
+                    "lat": 50.538420,
+                    "lng": 14.1305460,
+                    "count": 3061
+                }, {
+                    "lat": 50.565384,
+                    "lng": 15.9090920,
+                    "count": 2263
+                }, {
+                    "lat": 50.605158,
+                    "lng": 15.3281410,
+                    "count": 1647
+                }, {
+                    "lat": 50.644458,
+                    "lng": 13.8352840,
+                    "count": 1649
+                }, {
+                    "lat": 50.661116,
+                    "lng": 14.0531460,
+                    "count": 2289
+                }, {
+                    "lat": 50.678520,
+                    "lng": 14.5396990,
+                    "count": 1295
+                }, {
+                    "lat": 50.722053,
+                    "lng": 15.1703140,
+                    "count": 1915
+                }, {
+                    "lat": 50.766280,
+                    "lng": 15.0543390,
+                    "count": 4762
+                }, {
+                    "lat": 50.772556,
+                    "lng": 14.2127610,
+                    "count": 1782
+                }]
+            };
+            var baseLayer = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy;',
+                    maxZoom: 18
+                }
+            );
+
+            var cfg = {
+                // radius should be small ONLY if scaleRadius is true (or small radius is intended)
+                "radius": .2,
+                "maxOpacity": .8,
+                // scales the radius based on map zoom
+                "scaleRadius": true,
+                // if set to false the heatmap uses the global maximum for colorization
+                // if activated: uses the data maximum within the current map boundaries
+                //   (there will always be a red spot with useLocalExtremas true)
+                "useLocalExtrema": true,
+                // which field name in your data represents the latitude - default "lat"
+                latField: 'lat',
+                // which field name in your data represents the longitude - default "lng"
+                lngField: 'lng',
+                // which field name in your data represents the data value - default "value"
+                valueField: 'count'
+            };
+
+
+            var heatmapLayer = new HeatmapOverlay(cfg);
+
+            var map = new L.Map('map', {
+                center: new L.LatLng(50.028194, 15.200634),
+                zoom: 9,
+                layers: [baseLayer, heatmapLayer]
+            });
+
+            heatmapLayer.setData(testData);
+        });
+    </script>
+</body>
+
+</html>

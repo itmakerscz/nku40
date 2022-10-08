@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- blue #0089fa; red #ff002b; yellow #ffa900; green #00a753; -->
+<!-- blue #0099ff; red #ff0033; #990000 yellow #ff9900; green #009966; -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="192px" height="192px" viewBox="0 0 192 192" enable-background="new 0 0 192 192" xml:space="preserve">
+<!--g id="logo" transform="matrix(0.866, -0.5, 0.5, 0.866, -28, 28)"-->
+<g id="logo">
+	<circle id="itmakers" fill="#ff0033" cx="56" cy="56" r="36"/>
+	<circle fill="#ff9900" cx="62" cy="130" r="30"/>
+	<circle fill="#009933" cx="130" cy="130" r="30"/>
+	<circle fill="#0099ff" cx="130" cy="62" r="30"/>
+</g>
+<!--
+  <g transform="matrix(0.866, -0.5, 0.25, 0.433, 56, 56)">
+  <path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="#900"8C001C>
+    <path d="M 0,50 A 45,50 0 0,0 45,0 5,5 0 0,1 55,0 55,50 0 0,1 0,50Z" fill="#990000" opacity="0.9">
+      <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="1.25s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <path fill="#ff0033" d="M 36,0 A 36,36 0 0,0 -36,0Z" transform="matrix(0.866, -0.5, 0.5, 0.866, 56, 56)" />
+-->  
+</svg>
